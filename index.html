@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>html{color-scheme:light dark}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Bury Me</title>
+<meta name="description" content="Bury Me buries fiber optic drop cable and handles fiber optic problems. Call 205-237-0811.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Big+Shoulders+Display:wght@700;800&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: a ground cross-section is the hero image; one narrow column of plain sections beneath it, orange used only for the fiber line and the call button. */
+:root {
+  --bg: #eef0ea;
+  --surface: #e3e7de;
+  --fg: #1c211d;
+  --muted: #545e57;
+  --rule: #c8cec3;
+  --orange: #ec6410;
+  --orange-ink: #b04a07;
+  --on-orange: #1a1006;
+  --grass: #5c7a38;
+  --topsoil: #5b4431;
+  --subsoil: #8b5c3d;
+  --rock: #a99d8b;
+  --pedestal: #4b6948;
+  --house: #2a302b;
+  --house-fill: #f6f7f3;
+  --font-display: "Big Shoulders Display", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Barlow", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #121512; --surface: #1b1f1b; --fg: #e8ebe4; --muted: #9da69e; --rule: #2d332e;
+    --orange: #ff7a22; --orange-ink: #ff9550; --on-orange: #1a1006;
+    --grass: #4a672c; --topsoil: #3e2f23; --subsoil: #6c452e; --rock: #7c7266;
+    --pedestal: #5d7f59; --house: #d9ddd5; --house-fill: #1b1f1b;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #121512; --surface: #1b1f1b; --fg: #e8ebe4; --muted: #9da69e; --rule: #2d332e;
+  --orange: #ff7a22; --orange-ink: #ff9550; --on-orange: #1a1006;
+  --grass: #4a672c; --topsoil: #3e2f23; --subsoil: #6c452e; --rock: #7c7266;
+  --pedestal: #5d7f59; --house: #d9ddd5; --house-fill: #1b1f1b;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font: 400 1.0625rem/1.6 var(--font-body);
+  padding-inline: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 60rem; margin-inline: auto; }
+a { color: var(--orange-ink); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; border-radius: 4px; }
+
+/* Header */
+.top {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+  padding-block: 1.25rem; border-bottom: 1px solid var(--rule);
+}
+.mark { display: flex; flex-direction: column; line-height: 1; text-decoration: none; color: var(--fg); }
+.mark b { font: 800 1.9rem/0.9 var(--font-display); letter-spacing: 0.02em; text-transform: uppercase; }
+.mark span { font: 500 0.68rem/1 var(--font-mono); letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-top: 0.35rem; }
+.top-phone { font: 600 1rem/1 var(--font-body); color: var(--fg); text-decoration: none; white-space: nowrap; }
+.top-phone small { display: block; font: 500 0.66rem/1 var(--font-mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.3rem; text-align: right; }
+
+/* Hero */
+.hero { display: grid; gap: 1.5rem; padding-block: 2.5rem 1.5rem; }
+.eyebrow { margin: 0; font: 500 0.75rem/1 var(--font-mono); letter-spacing: 0.14em; text-transform: uppercase; color: var(--orange-ink); }
+h1 {
+  margin: 0; font: 800 clamp(3.4rem, 13vw, 7rem)/0.86 var(--font-display);
+  text-transform: uppercase; letter-spacing: 0.005em; text-wrap: balance;
+}
+.lede { margin: 0; max-width: 34rem; font-size: 1.2rem; color: var(--muted); }
+.lede strong { color: var(--fg); font-weight: 600; }
+.cta { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+.btn {
+  display: inline-flex; align-items: center; gap: 0.6rem; padding: 0.95rem 1.35rem; border-radius: 6px;
+  font: 600 1.05rem/1 var(--font-body); text-decoration: none; border: 2px solid transparent;
+}
+.btn-call { background: var(--orange); color: var(--on-orange); }
+.btn-call:hover { filter: brightness(1.06); }
+.btn-mail { border-color: var(--rule); color: var(--fg); }
+.btn-mail:hover { border-color: var(--fg); }
+.btn svg { width: 1.1em; height: 1.1em; flex: none; }
+
+/* Cross-section */
+.section-cut { margin: 0.5rem 0 0; }
+.section-cut svg { display: block; width: 100%; height: auto; max-width: 100%; border-radius: 8px; }
+.cut-sky { fill: var(--surface); }
+.cut-grass { fill: var(--grass); }
+.cut-top { fill: var(--topsoil); }
+.cut-sub { fill: var(--subsoil); }
+.cut-rock { fill: var(--rock); }
+.cut-ped { fill: var(--pedestal); }
+.cut-house { fill: var(--house-fill); stroke: var(--house); stroke-width: 3; stroke-linejoin: round; }
+.cut-door { fill: var(--house); }
+.cut-fiber { fill: none; stroke: var(--orange); stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; }
+.cut-light { fill: none; stroke: #fff3c4; stroke-width: 2.5; stroke-linecap: round; stroke-dasharray: 18 260; animation: run 3.2s linear infinite; opacity: 0.9; }
+.cut-label { font: 500 13px var(--font-mono); letter-spacing: 0.08em; text-transform: uppercase; fill: var(--fg); }
+.cut-label-light { fill: #f4efe6; }
+@keyframes run { from { stroke-dashoffset: 278; } to { stroke-dashoffset: 0; } }
+@media (prefers-reduced-motion: reduce) { .cut-light { animation: none; stroke-dasharray: none; opacity: 0; } }
+.section-cut figcaption { margin-top: 0.6rem; font-size: 0.92rem; color: var(--muted); }
+
+/* Body sections */
+.block { padding-block: 2.75rem; border-top: 1px solid var(--rule); }
+h2 {
+  margin: 0 0 1.25rem; font: 800 clamp(2rem, 6vw, 2.9rem)/0.95 var(--font-display);
+  text-transform: uppercase; letter-spacing: 0.01em; text-wrap: balance;
+}
+.services { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1.75rem 2.5rem; }
+.service { min-width: 0; display: grid; gap: 0.5rem; align-content: start; }
+.service h3 { margin: 0; font: 600 1.25rem/1.25 var(--font-body); }
+.service h3::before {
+  content: ""; display: block; width: 2.25rem; height: 4px; border-radius: 2px; background: var(--orange); margin-bottom: 0.75rem;
+}
+.service p { margin: 0; color: var(--muted); max-width: 36rem; }
+
+.about p { margin: 0; max-width: 38rem; font-size: 1.2rem; }
+
+.dig { display: grid; gap: 0.6rem; padding: 1.25rem 1.35rem; background: var(--surface); border-radius: 8px; max-width: 40rem; }
+.dig-tag { display: flex; align-items: center; gap: 0.6rem; font: 500 0.72rem/1 var(--font-mono); letter-spacing: 0.14em; text-transform: uppercase; color: var(--fg); }
+.flag { width: 14px; height: 18px; flex: none; }
+.flag rect { fill: var(--orange); }
+.flag line { stroke: var(--muted); stroke-width: 2; }
+.dig p { margin: 0; color: var(--muted); }
+
+.contact { display: grid; gap: 1.25rem; }
+.big-phone {
+  font: 800 clamp(2.6rem, 11vw, 5rem)/1 var(--font-display); color: var(--fg); text-decoration: none;
+  font-variant-numeric: tabular-nums; letter-spacing: 0.01em; width: fit-content;
+}
+.big-phone:hover { color: var(--orange-ink); }
+.contact-rows { display: grid; gap: 0.9rem; }
+.row { display: grid; gap: 0.2rem; }
+.row span { font: 500 0.7rem/1 var(--font-mono); letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+.row a, .row p { margin: 0; font-size: 1.1rem; overflow-wrap: anywhere; }
+
+footer {
+  display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem 1.5rem;
+  padding-block: 1.5rem 2.5rem; border-top: 1px solid var(--rule); font-size: 0.88rem; color: var(--muted);
+}
+
+@media (min-width: 760px) {
+  .hero { padding-block: 3.5rem 2rem; }
+  .contact { grid-template-columns: 1.4fr 1fr; align-items: end; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="mark" href="#top" aria-label="Bury Me home">
+      <b>Bury Me</b>
+      <span>Underground fiber</span>
+    </a>
+    <a class="top-phone" href="tel:+12052370811"><small>Call</small>205-237-0811</a>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <p class="eyebrow">Underground construction</p>
+      <h1 id="hero-title">We bury<br>drop fiber.</h1>
+      <p class="lede"><strong>Bury Me puts fiber optic drop cable underground.</strong> If there's a fiber optic issue, wherever it is, give us a call.</p>
+      <div class="cta">
+        <a class="btn btn-call" href="tel:+12052370811">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
+          Call 205-237-0811
+        </a>
+        <a class="btn btn-mail" href="mailto:ericweathers@buryme.work.gd">Email us</a>
+      </div>
+
+      <figure class="section-cut">
+        <svg viewBox="0 0 800 300" role="img" aria-labelledby="cut-title">
+          <title id="cut-title">Cross-section of a yard: an orange fiber drop runs underground from a pedestal at the street to a house.</title>
+          <rect class="cut-sky" x="0" y="0" width="800" height="120"/>
+          <rect class="cut-grass" x="0" y="112" width="800" height="14"/>
+          <rect class="cut-top" x="0" y="126" width="800" height="78"/>
+          <rect class="cut-sub" x="0" y="204" width="800" height="96"/>
+          <g class="cut-rock">
+            <circle cx="70" cy="238" r="7"/><circle cx="152" cy="268" r="5"/><circle cx="240" cy="230" r="4"/>
+            <circle cx="330" cy="276" r="8"/><circle cx="418" cy="244" r="5"/><circle cx="512" cy="282" r="6"/>
+            <circle cx="598" cy="236" r="4"/><circle cx="690" cy="262" r="7"/><circle cx="760" cy="226" r="5"/>
+            <circle cx="120" cy="160" r="3"/><circle cx="380" cy="150" r="3"/><circle cx="560" cy="176" r="3"/>
+          </g>
+          <!-- pedestal -->
+          <rect class="cut-ped" x="78" y="62" width="40" height="56" rx="4"/>
+          <rect class="cut-ped" x="74" y="56" width="48" height="10" rx="3"/>
+          <!-- house -->
+          <path class="cut-house" d="M612 112V64l64-40 64 40v48z"/>
+          <rect class="cut-door" x="664" y="78" width="22" height="34" rx="2"/>
+          <!-- fiber drop -->
+          <path id="drop" class="cut-fiber" d="M98 118V172H640V112"/>
+          <path class="cut-light" d="M98 118V172H640V112"/>
+          <text class="cut-label" x="60" y="44">Pedestal</text>
+          <text class="cut-label" x="620" y="14">Home</text>
+          <text class="cut-label cut-label-light" x="300" y="196">Drop fiber, buried</text>
+        </svg>
+        <figcaption>A drop runs from the fiber pedestal to the house. We put it in the ground where it belongs.</figcaption>
+      </figure>
+    </section>
+
+    <section class="block" aria-labelledby="what-title">
+      <h2 id="what-title">What we do</h2>
+      <div class="services">
+        <div class="service">
+          <h3>Drop fiber burial</h3>
+          <p>We bury fiber optic drop cable from the pedestal to the home or business, including temporary drops left lying on top of the ground.</p>
+        </div>
+        <div class="service">
+          <h3>Fiber optic problems</h3>
+          <p>A cut line, an exposed drop, or a cable that needs to come up and go back down. Anywhere there's a fiber optic issue, we'll take the call.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="block about" aria-labelledby="about-title">
+      <h2 id="about-title">Small company. Hard work.</h2>
+      <p>Bury Me is a small company, but we work hard on every job. Call us, tell us what's going on, and we'll take it from there.</p>
+    </section>
+
+    <section class="block" aria-labelledby="dig-title">
+      <h2 id="dig-title" hidden>Before you dig</h2>
+      <div class="dig">
+        <p class="dig-tag"><svg class="flag" viewBox="0 0 14 18" aria-hidden="true"><line x1="1" y1="0" x2="1" y2="18"/><rect x="2" y="1" width="12" height="8"/></svg>Orange means communications</p>
+        <p>Orange paint and flags in a yard mark buried communication lines like fiber, phone and cable. Planning to dig yourself? Call 811 first so buried lines get marked.</p>
+      </div>
+    </section>
+
+    <section class="block contact" aria-labelledby="contact-title">
+      <div>
+        <h2 id="contact-title">Call Bury Me</h2>
+        <a class="big-phone" href="tel:+12052370811">205-237-0811</a>
+      </div>
+      <div class="contact-rows">
+        <div class="row"><span>Email</span><a href="mailto:ericweathers@buryme.work.gd">ericweathers@buryme.work.gd</a></div>
+        <div class="row"><span>Service</span><p>Drop fiber burial and fiber optic repairs</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>&copy; 2026 Bury Me</span>
+    <span>Underground construction company</span>
+  </footer>
+</div>
+</body>
+</html>
