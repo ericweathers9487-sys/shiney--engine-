@@ -3,254 +3,422 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<style>html{color-scheme:light dark}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
-<title>Bury Me</title>
-<meta name="description" content="Bury Me buries fiber optic drop cable and handles fiber optic problems. Call 205-237-0811.">
+<title>Bury Me | Fiber drop burial in Alabama</title>
+<meta name="description" content="Bury Me buries fiber optic drop cable and fixes fiber problems in Alabama. Subcontract work for fiber contractors and internet providers. Call 205-237-0811.">
+<link rel="canonical" href="https://buryme.org/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://buryme.org/">
+<meta property="og:title" content="Bury Me | Fiber drop burial in Alabama">
+<meta property="og:description" content="We bury fiber optic drop cable and fix fiber problems in Alabama. Call 205-237-0811.">
+<meta name="theme-color" content="#2a211b">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%232a211b'/%3E%3Crect y='9' width='32' height='3' fill='%234c7a2e'/%3E%3Cpath d='M9 4v18h14v-6' fill='none' stroke='%23ff6a13' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Big+Shoulders+Display:wght@700;800&family=IBM+Plex+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Bury Me",
+  "url": "https://buryme.org/",
+  "telephone": "+1-205-237-0811",
+  "email": "ericweathers@buryme.org",
+  "description": "Fiber optic drop cable burial and fiber repair.",
+  "areaServed": "Alabama",
+  "founder": "Eric Weathers"
+}
+</script>
 <style>
-/* Layout: a ground cross-section is the hero image; one narrow column of plain sections beneath it, orange used only for the fiber line and the call button. */
+/*
+  Concept: the page is a cut through the ground. The wordmark is half buried at the
+  grass line, and one orange drop cable runs from a pedestal down through topsoil and
+  Alabama red clay until it ends at the phone number.
+*/
 :root {
-  --bg: #eef0ea;
-  --surface: #e3e7de;
-  --fg: #1c211d;
-  --muted: #545e57;
-  --rule: #c8cec3;
-  --orange: #ec6410;
-  --orange-ink: #b04a07;
-  --on-orange: #1a1006;
-  --grass: #5c7a38;
-  --topsoil: #5b4431;
-  --subsoil: #8b5c3d;
-  --rock: #a99d8b;
-  --pedestal: #4b6948;
-  --house: #2a302b;
-  --house-fill: #f6f7f3;
-  --font-display: "Big Shoulders Display", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
-  --font-body: "Barlow", "Helvetica Neue", Arial, sans-serif;
-  --font-mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+  --sky: #dce4e8;
+  --ink: #1b1511;
+  --ink-soft: #4a4039;
+  --grass: #4c7a2e;
+  --loam: #2a211b;
+  --loam-letter: #3d3027;
+  --clay: #7e3218;
+  --clay-deep: #511f10;
+  --rock: #1e1713;
+  --bone: #f2e8de;
+  --bone-soft: #d6c7b9;
+  --orange: #ff6a13;
+  --orange-hi: #ffd2a8;
+  --on-orange: #1b1511;
+  --speck: rgba(255, 236, 214, 0.05);
+
+  --col: min(66rem, 100% - 32px);
+  --gutter: max(16px, (100% - 66rem) / 2);
+  --line-x: calc(var(--gutter) + 14px);
+  --indent: 52px;
+
+  --font: "Archivo", "Arial", sans-serif;
+  color-scheme: light;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #121512; --surface: #1b1f1b; --fg: #e8ebe4; --muted: #9da69e; --rule: #2d332e;
-    --orange: #ff7a22; --orange-ink: #ff9550; --on-orange: #1a1006;
-    --grass: #4a672c; --topsoil: #3e2f23; --subsoil: #6c452e; --rock: #7c7266;
-    --pedestal: #5d7f59; --house: #d9ddd5; --house-fill: #1b1f1b;
+    --sky: #18212a;
+    --ink: #f2e8de;
+    --ink-soft: #b9c3cb;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --bg: #121512; --surface: #1b1f1b; --fg: #e8ebe4; --muted: #9da69e; --rule: #2d332e;
-  --orange: #ff7a22; --orange-ink: #ff9550; --on-orange: #1a1006;
-  --grass: #4a672c; --topsoil: #3e2f23; --subsoil: #6c452e; --rock: #7c7266;
-  --pedestal: #5d7f59; --house: #d9ddd5; --house-fill: #1b1f1b;
+  --sky: #18212a;
+  --ink: #f2e8de;
+  --ink-soft: #b9c3cb;
   color-scheme: dark;
 }
 
 * { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; overflow-x: clip; }
+body { overflow-x: clip; }
 body {
-  background: var(--bg);
-  color: var(--fg);
-  font: 400 1.0625rem/1.6 var(--font-body);
-  padding-inline: 16px;
+  margin: 0;
+  background: var(--rock);
+  color: var(--bone);
+  font: 400 1.0625rem/1.6 var(--font);
+  font-stretch: 100%;
   -webkit-font-smoothing: antialiased;
 }
-.wrap { max-width: 60rem; margin-inline: auto; }
-a { color: var(--orange-ink); text-underline-offset: 3px; }
-a:focus-visible, button:focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; border-radius: 4px; }
+a { color: inherit; text-underline-offset: 0.2em; text-decoration-thickness: 1px; }
+a:focus-visible { outline: 3px solid var(--orange); outline-offset: 4px; border-radius: 3px; }
+.wrap { width: var(--col); margin-inline: auto; padding-left: var(--indent); }
+.skip { position: absolute; left: -999px; top: 8px; background: var(--orange); color: var(--on-orange); padding: 8px 12px; border-radius: 4px; z-index: 10; }
+.skip:focus { left: 16px; }
 
-/* Header */
+/* ---------- Above ground ---------- */
+.sky { background: var(--sky); color: var(--ink); overflow: hidden; }
 .top {
-  display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
-  padding-block: 1.25rem; border-bottom: 1px solid var(--rule);
+  display: flex; justify-content: space-between; align-items: baseline; gap: 0.5rem 1.5rem; flex-wrap: wrap;
+  padding-block: 1.1rem 0;
+  font-size: 0.95rem;
 }
-.mark { display: flex; flex-direction: column; line-height: 1; text-decoration: none; color: var(--fg); }
-.mark b { font: 800 1.9rem/0.9 var(--font-display); letter-spacing: 0.02em; text-transform: uppercase; }
-.mark span { font: 500 0.68rem/1 var(--font-mono); letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-top: 0.35rem; }
-.top-phone { font: 600 1rem/1 var(--font-body); color: var(--fg); text-decoration: none; white-space: nowrap; }
-.top-phone small { display: block; font: 500 0.66rem/1 var(--font-mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.3rem; text-align: right; }
+.top p { margin: 0; color: var(--ink-soft); }
+.top a { font-weight: 700; text-decoration: none; white-space: nowrap; }
+.top a:hover { text-decoration: underline; }
 
-/* Hero */
-.hero { display: grid; gap: 1.5rem; padding-block: 2.5rem 1.5rem; }
-.eyebrow { margin: 0; font: 500 0.75rem/1 var(--font-mono); letter-spacing: 0.14em; text-transform: uppercase; color: var(--orange-ink); }
-h1 {
-  margin: 0; font: 800 clamp(3.4rem, 13vw, 7rem)/0.86 var(--font-display);
-  text-transform: uppercase; letter-spacing: 0.005em; text-wrap: balance;
+.horizon {
+  position: relative;
+  isolation: isolate;
+  container-type: inline-size;
+  margin-top: clamp(2.5rem, 9vw, 5.5rem);
 }
-.lede { margin: 0; max-width: 34rem; font-size: 1.2rem; color: var(--muted); }
-.lede strong { color: var(--fg); font-weight: 600; }
-.cta { display: flex; flex-wrap: wrap; gap: 0.75rem; }
-.btn {
-  display: inline-flex; align-items: center; gap: 0.6rem; padding: 0.95rem 1.35rem; border-radius: 6px;
-  font: 600 1.05rem/1 var(--font-body); text-decoration: none; border: 2px solid transparent;
+/* The grass line cuts the wordmark at --h. Above it the letters are ink; below, they're buried. */
+.horizon > * { --h: 66%; }
+@container (min-width: 600px) {
+  .horizon > * { --h: 63%; }
 }
-.btn-call { background: var(--orange); color: var(--on-orange); }
-.btn-call:hover { filter: brightness(1.06); }
-.btn-mail { border-color: var(--rule); color: var(--fg); }
-.btn-mail:hover { border-color: var(--fg); }
-.btn svg { width: 1.1em; height: 1.1em; flex: none; }
+.horizon h1 {
+  margin: 0;
+  font-family: var(--font);
+  font-weight: 900;
+  font-stretch: 125%;
+  font-size: 26cqi;
+  line-height: 0.8;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  padding-bottom: 0.06em;
+  color: transparent;
+  background: linear-gradient(to bottom, var(--ink) 0 var(--h), var(--loam-letter) var(--h));
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.horizon h1 span { display: block; }
+.ground-band {
+  /* full-bleed sky→grass→loam behind the wordmark, split at the same line */
+  position: absolute; z-index: -1;
+  top: 0; bottom: 0; left: -100vw; right: -100vw;
+  background: linear-gradient(to bottom, var(--sky) 0 var(--h), var(--grass) var(--h) calc(var(--h) + 9px), var(--loam) calc(var(--h) + 9px));
+}
+@container (min-width: 600px) {
+  .horizon h1 { font-size: 16.6cqi; }
+  .horizon h1 span { display: inline; }
+}
+/* the drop starts at the pedestal and runs down into the ground */
+.horizon .drop {
+  position: absolute; z-index: 1;
+  left: calc(12px - var(--indent)); width: 5px;
+  top: var(--h); bottom: 0;
+  background: var(--orange);
+}
+.pedestal {
+  position: absolute; z-index: 2;
+  left: calc(4.5px - var(--indent));
+  bottom: calc(100% - var(--h));
+  width: 20px; height: 40px;
+  border-radius: 4px 4px 1px 1px;
+  background: var(--grass);
+  box-shadow: inset 0 6px 0 rgba(255, 255, 255, 0.14), inset -5px 0 0 rgba(0, 0, 0, 0.16);
+}
+.pedestal::after {
+  content: ""; position: absolute; left: 7px; top: 12px; width: 6px; height: 2px; border-radius: 1px;
+  background: rgba(0, 0, 0, 0.3);
+}
 
-/* Cross-section */
-.section-cut { margin: 0.5rem 0 0; }
-.section-cut svg { display: block; width: 100%; height: auto; max-width: 100%; border-radius: 8px; }
-.cut-sky { fill: var(--surface); }
-.cut-grass { fill: var(--grass); }
-.cut-top { fill: var(--topsoil); }
-.cut-sub { fill: var(--subsoil); }
-.cut-rock { fill: var(--rock); }
-.cut-ped { fill: var(--pedestal); }
-.cut-house { fill: var(--house-fill); stroke: var(--house); stroke-width: 3; stroke-linejoin: round; }
-.cut-door { fill: var(--house); }
-.cut-fiber { fill: none; stroke: var(--orange); stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; }
-.cut-light { fill: none; stroke: #fff3c4; stroke-width: 2.5; stroke-linecap: round; stroke-dasharray: 18 260; animation: run 3.2s linear infinite; opacity: 0.9; }
-.cut-label { font: 500 13px var(--font-mono); letter-spacing: 0.08em; text-transform: uppercase; fill: var(--fg); }
-.cut-label-light { fill: #f4efe6; }
-@keyframes run { from { stroke-dashoffset: 278; } to { stroke-dashoffset: 0; } }
-@media (prefers-reduced-motion: reduce) { .cut-light { animation: none; stroke-dasharray: none; opacity: 0; } }
-.section-cut figcaption { margin-top: 0.6rem; font-size: 0.92rem; color: var(--muted); }
+/* ---------- Underground run ---------- */
+.run { position: relative; isolation: isolate; }
+.line {
+  position: absolute; z-index: 3;
+  left: calc(var(--line-x) - 2px); width: 5px;
+  top: -2px; bottom: 0;
+  background: var(--orange);
+  border-radius: 0 0 0 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.line::after {
+  content: ""; position: absolute; left: 0; right: 0; height: 120px; top: -120px;
+  background: linear-gradient(to bottom, transparent, var(--orange-hi) 55%, #fff 70%, transparent);
+  animation: light 6s linear infinite;
+}
+@keyframes light { from { top: -120px; } to { top: 100%; } }
+@media (prefers-reduced-motion: reduce) { .line::after { display: none; } }
 
-/* Body sections */
-.block { padding-block: 2.75rem; border-top: 1px solid var(--rule); }
+.layer { position: relative; padding-block: clamp(3rem, 8vw, 5.5rem); }
+.layer > .wrap { position: relative; z-index: 2; }
+/* irregular soil boundary along the top of each deeper layer */
+.layer.edge::before {
+  content: ""; position: absolute; z-index: 1; left: 0; right: 0; top: -15px; height: 16px;
+  background: inherit;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 16' preserveAspectRatio='none'%3E%3Cpath d='M0 9 C18 4 30 12 52 8 S88 2 110 7 S150 13 172 8 S214 3 240 8 V16 H0Z'/%3E%3C/svg%3E") 0 0 / 240px 16px repeat-x;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 16' preserveAspectRatio='none'%3E%3Cpath d='M0 9 C18 4 30 12 52 8 S88 2 110 7 S150 13 172 8 S214 3 240 8 V16 H0Z'/%3E%3C/svg%3E") 0 0 / 240px 16px repeat-x;
+}
+.loam {
+  background-color: var(--loam);
+  background-image:
+    radial-gradient(circle at 20% 30%, var(--speck) 0 2px, transparent 3px),
+    radial-gradient(circle at 70% 80%, var(--speck) 0 1.5px, transparent 2.5px),
+    radial-gradient(circle at 45% 60%, rgba(0,0,0,0.18) 0 3px, transparent 4px);
+  background-size: 37px 41px, 53px 47px, 71px 67px;
+}
+.clay {
+  background-color: var(--clay);
+  background-image:
+    radial-gradient(circle at 30% 40%, rgba(255, 220, 190, 0.07) 0 2px, transparent 3px),
+    radial-gradient(circle at 75% 20%, rgba(0, 0, 0, 0.14) 0 4px, transparent 5px);
+  background-size: 43px 39px, 89px 83px;
+}
+.clay-deep {
+  background-color: var(--clay-deep);
+  background-image: radial-gradient(circle at 60% 50%, rgba(0, 0, 0, 0.2) 0 5px, transparent 6px);
+  background-size: 97px 91px;
+}
+.rock { background-color: var(--rock); }
+
 h2 {
-  margin: 0 0 1.25rem; font: 800 clamp(2rem, 6vw, 2.9rem)/0.95 var(--font-display);
-  text-transform: uppercase; letter-spacing: 0.01em; text-wrap: balance;
+  margin: 0 0 1.4rem;
+  font-weight: 800;
+  font-stretch: 112%;
+  font-size: clamp(2rem, 6.4vw, 3.4rem);
+  line-height: 1;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
 }
-.services { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1.75rem 2.5rem; }
-.service { min-width: 0; display: grid; gap: 0.5rem; align-content: start; }
-.service h3 { margin: 0; font: 600 1.25rem/1.25 var(--font-body); }
-.service h3::before {
-  content: ""; display: block; width: 2.25rem; height: 4px; border-radius: 2px; background: var(--orange); margin-bottom: 0.75rem;
+p { margin: 0; }
+.soft { color: var(--bone-soft); }
+
+/* intro, right under the grass */
+.intro { padding-top: clamp(1.75rem, 5vw, 3rem); padding-bottom: 0; }
+.lede {
+  max-width: 34rem;
+  font-size: clamp(1.25rem, 2.6vw, 1.55rem);
+  line-height: 1.4;
+  font-stretch: 100%;
+  text-wrap: pretty;
 }
-.service p { margin: 0; color: var(--muted); max-width: 36rem; }
-
-.about p { margin: 0; max-width: 38rem; font-size: 1.2rem; }
-
-.dig { display: grid; gap: 0.6rem; padding: 1.25rem 1.35rem; background: var(--surface); border-radius: 8px; max-width: 40rem; }
-.dig-tag { display: flex; align-items: center; gap: 0.6rem; font: 500 0.72rem/1 var(--font-mono); letter-spacing: 0.14em; text-transform: uppercase; color: var(--fg); }
-.flag { width: 14px; height: 18px; flex: none; }
-.flag rect { fill: var(--orange); }
-.flag line { stroke: var(--muted); stroke-width: 2; }
-.dig p { margin: 0; color: var(--muted); }
-
-.contact { display: grid; gap: 1.25rem; }
-.big-phone {
-  font: 800 clamp(2.6rem, 11vw, 5rem)/1 var(--font-display); color: var(--fg); text-decoration: none;
-  font-variant-numeric: tabular-nums; letter-spacing: 0.01em; width: fit-content;
+.cta { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.9rem; }
+.btn {
+  display: inline-flex; align-items: center; gap: 0.6rem;
+  min-height: 3.25rem; padding: 0.85rem 1.35rem; border-radius: 5px;
+  font-weight: 700; font-size: 1.05rem; line-height: 1; text-decoration: none;
+  border: 2px solid transparent;
 }
-.big-phone:hover { color: var(--orange-ink); }
-.contact-rows { display: grid; gap: 0.9rem; }
-.row { display: grid; gap: 0.2rem; }
-.row span { font: 500 0.7rem/1 var(--font-mono); letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
-.row a, .row p { margin: 0; font-size: 1.1rem; overflow-wrap: anywhere; }
+.btn svg { width: 1.15em; height: 1.15em; flex: none; }
+.btn-call { background: var(--orange); color: var(--on-orange); }
+.btn-call:hover { background: #ff8136; }
+.btn-ghost { border-color: rgba(242, 232, 222, 0.38); color: var(--bone); }
+.btn-ghost:hover { border-color: var(--bone); }
 
-footer {
-  display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem 1.5rem;
-  padding-block: 1.5rem 2.5rem; border-top: 1px solid var(--rule); font-size: 0.88rem; color: var(--muted);
+/* services */
+.jobs { display: grid; gap: 2.25rem 3rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr)); }
+.job h3 { margin: 0 0 0.5rem; font-weight: 700; font-size: 1.35rem; line-height: 1.2; }
+.job p { color: var(--bone-soft); max-width: 32rem; }
+.job + .job { position: relative; }
+
+/* experience bar: ten years split by kind of work */
+.years .soft { max-width: 36rem; }
+.core, .legend { max-width: 46rem; }
+.core { display: grid; grid-template-columns: 5fr 3fr 2fr; gap: 4px; margin-top: 2rem; }
+.core span { height: 14px; border-radius: 2px; }
+.core span:nth-child(1), .legend li:nth-child(1)::before { background: var(--orange); }
+.core span:nth-child(2), .legend li:nth-child(2)::before { background: #f6d2b5; }
+.core span:nth-child(3), .legend li:nth-child(3)::before { background: #d9956f; }
+.legend { display: grid; gap: 0.7rem; margin: 1rem 0 0; padding: 0; list-style: none; }
+.legend li { display: flex; align-items: baseline; gap: 0.65rem; color: var(--bone-soft); line-height: 1.35; }
+.legend li::before { content: ""; flex: none; width: 12px; height: 12px; border-radius: 2px; transform: translateY(1px); }
+.legend b { color: var(--bone); font-weight: 800; font-stretch: 112%; font-size: 1.25rem; white-space: nowrap; }
+@media (min-width: 640px) {
+  .legend { grid-template-columns: 5fr 3fr 2fr; gap: 4px; margin-top: 0.8rem; }
+  .legend li { display: block; padding-right: 0.75rem; }
+  .legend li::before { display: none; }
+  .legend b { display: block; font-size: 1.6rem; line-height: 1; margin-bottom: 0.35rem; }
 }
+.rigs { margin-top: 2rem; max-width: 36rem; }
 
-@media (min-width: 760px) {
-  .hero { padding-block: 3.5rem 2rem; }
-  .contact { grid-template-columns: 1.4fr 1fr; align-items: end; }
+/* contractors */
+.sub p { max-width: 40rem; }
+.sub p + p { margin-top: 1rem; }
+.sub .textlink { display: inline-block; margin-top: 1.5rem; font-weight: 700; color: var(--bone); }
+
+/* the drop ends here: it turns and runs into the phone number */
+.end {
+  --pt: clamp(3rem, 8vw, 5rem);
+  --phone: clamp(2.1rem, 9.4vw, 5.6rem);
+  padding-block: var(--pt) clamp(3.5rem, 8vw, 5.5rem);
+}
+.callblock { position: relative; }
+.elbow {
+  position: absolute; pointer-events: none;
+  left: calc(12px - var(--indent));
+  top: calc(-1 * var(--pt) - 16px);
+  bottom: calc(var(--phone) * 0.5 - 2.5px);
+  width: calc(var(--indent) - 12px - 10px);
+  border-left: 5px solid var(--orange); border-bottom: 5px solid var(--orange);
+  border-bottom-left-radius: 16px;
+}
+.end h2 { margin-bottom: 0.75rem; }
+.phone {
+  display: block; width: fit-content;
+  font-weight: 900; font-stretch: 100%;
+  font-size: var(--phone); line-height: 1; letter-spacing: -0.01em; white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  text-decoration: none; color: var(--bone);
+}
+.phone:hover { color: var(--orange); }
+@media (min-width: 700px) { .phone { font-stretch: 118%; } }
+.reach { display: grid; gap: 1.25rem 3rem; margin-top: 2.25rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); max-width: 46rem; }
+.reach dt { color: var(--bone-soft); font-size: 0.95rem; }
+.reach dd { margin: 0.15rem 0 0; font-size: 1.15rem; font-weight: 600; overflow-wrap: anywhere; }
+
+footer { border-top: 1px solid rgba(242, 232, 222, 0.12); padding-block: 1.75rem 2.5rem; font-size: 0.95rem; color: var(--bone-soft); }
+footer .wrap { display: grid; gap: 1rem; }
+.dig { display: flex; gap: 0.75rem; align-items: flex-start; max-width: 40rem; }
+.dig svg { flex: none; width: 16px; height: 22px; margin-top: 0.15rem; }
+.dig a { color: var(--bone); font-weight: 700; }
+.legal { display: flex; flex-wrap: wrap; gap: 0.25rem 1.5rem; }
+
+@media (min-width: 900px) {
+  :root { --indent: 76px; }
+  .line { left: calc(var(--line-x) + 8px); }
+  .horizon .drop, .elbow { left: calc(22px - var(--indent)); }
+  .pedestal { left: calc(14.5px - var(--indent)); }
+  .elbow { width: calc(var(--indent) - 22px - 12px); }
 }
 </style>
 </head>
 <body>
-<div class="wrap">
-  <header class="top">
-    <a class="mark" href="#top" aria-label="Bury Me home">
-      <b>Bury Me</b>
-      <span>Underground fiber</span>
-    </a>
-    <a class="top-phone" href="tel:+12052370811"><small>Call</small>205-237-0811</a>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="sky">
+  <header class="wrap top">
+    <p>Fiber drop burial in Alabama</p>
+    <a href="tel:+12052370811">Call 205-237-0811</a>
   </header>
-
-  <main id="top">
-    <section class="hero" aria-labelledby="hero-title">
-      <p class="eyebrow">Underground construction</p>
-      <h1 id="hero-title">We bury<br>drop fiber.</h1>
-      <p class="lede"><strong>Bury Me puts fiber optic drop cable underground.</strong> If there's a fiber optic issue, wherever it is, give us a call.</p>
-      <div class="cta">
-        <a class="btn btn-call" href="tel:+12052370811">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
-          Call 205-237-0811
-        </a>
-        <a class="btn btn-mail" href="mailto:ericweathers@buryme.work.gd">Email us</a>
-      </div>
-
-      <figure class="section-cut">
-        <svg viewBox="0 0 800 300" role="img" aria-labelledby="cut-title">
-          <title id="cut-title">Cross-section of a yard: an orange fiber drop runs underground from a pedestal at the street to a house.</title>
-          <rect class="cut-sky" x="0" y="0" width="800" height="120"/>
-          <rect class="cut-grass" x="0" y="112" width="800" height="14"/>
-          <rect class="cut-top" x="0" y="126" width="800" height="78"/>
-          <rect class="cut-sub" x="0" y="204" width="800" height="96"/>
-          <g class="cut-rock">
-            <circle cx="70" cy="238" r="7"/><circle cx="152" cy="268" r="5"/><circle cx="240" cy="230" r="4"/>
-            <circle cx="330" cy="276" r="8"/><circle cx="418" cy="244" r="5"/><circle cx="512" cy="282" r="6"/>
-            <circle cx="598" cy="236" r="4"/><circle cx="690" cy="262" r="7"/><circle cx="760" cy="226" r="5"/>
-            <circle cx="120" cy="160" r="3"/><circle cx="380" cy="150" r="3"/><circle cx="560" cy="176" r="3"/>
-          </g>
-          <!-- pedestal -->
-          <rect class="cut-ped" x="78" y="62" width="40" height="56" rx="4"/>
-          <rect class="cut-ped" x="74" y="56" width="48" height="10" rx="3"/>
-          <!-- house -->
-          <path class="cut-house" d="M612 112V64l64-40 64 40v48z"/>
-          <rect class="cut-door" x="664" y="78" width="22" height="34" rx="2"/>
-          <!-- fiber drop -->
-          <path id="drop" class="cut-fiber" d="M98 118V172H640V112"/>
-          <path class="cut-light" d="M98 118V172H640V112"/>
-          <text class="cut-label" x="60" y="44">Pedestal</text>
-          <text class="cut-label" x="620" y="14">Home</text>
-          <text class="cut-label cut-label-light" x="300" y="196">Drop fiber, buried</text>
-        </svg>
-        <figcaption>A drop runs from the fiber pedestal to the house. We put it in the ground where it belongs.</figcaption>
-      </figure>
-    </section>
-
-    <section class="block" aria-labelledby="what-title">
-      <h2 id="what-title">What we do</h2>
-      <div class="services">
-        <div class="service">
-          <h3>Drop fiber burial</h3>
-          <p>We bury fiber optic drop cable from the pedestal to the home or business, including temporary drops left lying on top of the ground.</p>
-        </div>
-        <div class="service">
-          <h3>Fiber optic problems</h3>
-          <p>A cut line, an exposed drop, or a cable that needs to come up and go back down. Anywhere there's a fiber optic issue, we'll take the call.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="block about" aria-labelledby="about-title">
-      <h2 id="about-title">Small company. Hard work.</h2>
-      <p>Bury Me is a small company, but we work hard on every job. Call us, tell us what's going on, and we'll take it from there.</p>
-    </section>
-
-    <section class="block" aria-labelledby="dig-title">
-      <h2 id="dig-title" hidden>Before you dig</h2>
-      <div class="dig">
-        <p class="dig-tag"><svg class="flag" viewBox="0 0 14 18" aria-hidden="true"><line x1="1" y1="0" x2="1" y2="18"/><rect x="2" y="1" width="12" height="8"/></svg>Orange means communications</p>
-        <p>Orange paint and flags in a yard mark buried communication lines like fiber, phone and cable. Planning to dig yourself? Call 811 first so buried lines get marked.</p>
-      </div>
-    </section>
-
-    <section class="block contact" aria-labelledby="contact-title">
-      <div>
-        <h2 id="contact-title">Call Bury Me</h2>
-        <a class="big-phone" href="tel:+12052370811">205-237-0811</a>
-      </div>
-      <div class="contact-rows">
-        <div class="row"><span>Email</span><a href="mailto:ericweathers@buryme.work.gd">ericweathers@buryme.work.gd</a></div>
-        <div class="row"><span>Service</span><p>Drop fiber burial and fiber optic repairs</p></div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <span>&copy; 2026 Bury Me</span>
-    <span>Underground construction company</span>
-  </footer>
+  <div class="wrap">
+    <div class="horizon">
+      <div class="ground-band" aria-hidden="true"></div>
+      <span class="drop" aria-hidden="true"></span>
+      <span class="pedestal" aria-hidden="true"></span>
+      <h1><span>Bury</span> <span>Me</span></h1>
+    </div>
+  </div>
 </div>
+
+<main id="main">
+  <div class="run">
+    <div class="line" aria-hidden="true"></div>
+
+    <section class="layer loam intro" aria-label="About Bury Me">
+      <div class="wrap">
+        <p class="lede">We bury fiber optic drop cable from the pedestal to the house, and fix fiber that's been cut, exposed or left lying across the yard.</p>
+        <div class="cta">
+          <a class="btn btn-call" href="tel:+12052370811">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
+            Call 205-237-0811
+          </a>
+          <a class="btn btn-ghost" href="mailto:ericweathers@buryme.org">Email Bury Me</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="layer loam" aria-labelledby="jobs-title">
+      <div class="wrap">
+        <h2 id="jobs-title">What we do</h2>
+        <div class="jobs">
+          <div class="job">
+            <h3>Drop burial</h3>
+            <p>We bury fiber optic drop cable from the pedestal or handhole to the home or business, including temporary drops left running on top of the ground.</p>
+          </div>
+          <div class="job">
+            <h3>Fiber repair</h3>
+            <p>Cut lines, exposed drops, and cable that has to come up and go back down. If there's a fiber problem in the ground, we'll take the call.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="layer clay edge" aria-labelledby="years-title">
+      <div class="wrap years">
+        <h2 id="years-title">Ten years in the ground</h2>
+        <p class="soft">Eric Weathers started Bury Me after a decade of underground utility work.</p>
+        <div class="core" aria-hidden="true"><span></span><span></span><span></span></div>
+        <ul class="legend" aria-label="Ten years of experience by type of work">
+          <li><span><b>5 years</b> burying fiber</span></li>
+          <li><span><b>3 years</b> directional drilling</span></li>
+          <li><span><b>2 years</b> interduct, pulling fiber, vaults</span></li>
+        </ul>
+        <p class="rigs soft">He's run plows, backhoes and mini excavators, and hauled equipment with 3500 trucks.</p>
+      </div>
+    </section>
+
+    <section class="layer clay-deep edge" aria-labelledby="sub-title">
+      <div class="wrap sub">
+        <h2 id="sub-title">Working a fiber build?</h2>
+        <p class="soft">Bury Me takes drop burial and fiber repair work as a subcontractor for fiber contractors and internet providers in Alabama.</p>
+        <p class="soft">It's a small company. You deal with the owner from the first call to the last drop.</p>
+        <a class="textlink" href="tel:+12052370811">Call about subcontract work</a>
+      </div>
+    </section>
+  </div>
+
+  <section class="layer rock end edge" aria-labelledby="call-title">
+    <div class="wrap">
+      <div class="callblock">
+        <span class="elbow" aria-hidden="true"></span>
+        <h2 id="call-title">Call Bury Me</h2>
+        <a class="phone" href="tel:+12052370811">205-237-0811</a>
+      </div>
+      <dl class="reach">
+        <div><dt>Email</dt><dd><a href="mailto:ericweathers@buryme.org">ericweathers@buryme.org</a></dd></div>
+        <div><dt>Work</dt><dd>Drop fiber burial and fiber repair, across Alabama</dd></div>
+      </dl>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="dig">
+      <svg viewBox="0 0 16 22" aria-hidden="true"><line x1="1.5" y1="0" x2="1.5" y2="22" stroke="#d6c7b9" stroke-width="2"/><rect x="3" y="1" width="13" height="9" rx="1" fill="#ff6a13"/></svg>
+      <span>Digging yourself? <a href="tel:811">Call 811</a> first so buried lines get marked. Orange flags and paint mean communication lines like fiber.</span>
+    </p>
+    <p class="legal"><span>&copy; 2026 Bury Me</span><span>buryme.org</span></p>
+  </div>
+</footer>
 </body>
 </html>
